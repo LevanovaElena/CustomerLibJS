@@ -1,0 +1,17 @@
+{
+  "name": "customerclassjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no __test__ specified\\\" && exit 1"
+  },
+  "author": "Levanova Elena",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
