@@ -6,6 +6,7 @@ class AddressValidator
 
     ValidatorAddress(address) {
         let result = [];
+        if(!address)return result;
         let allProperty=Object.getOwnPropertyNames(address);
         if(allProperty.length>0)
         {
@@ -30,13 +31,14 @@ class AddressValidator
                     case "_postalCode":
                         if(!address._postalCode)result.push({propertyName:item,message: "PostalCode is required."});
                         else if(address._postalCode.length>6)result.push({propertyName:item,message: "PostalCode should maximum 6 lenght."});
-                          break;
+                        break;
                     case "_state":
                         if(!address._state)result.push({propertyName:item,message: "State is required."});
                         else if(address._state.length>20)result.push({propertyName:item,message: "State should maximum 6 lenght."});
                         break;
                     case "_country":
                         if(!address._country)result.push({propertyName:item,message: "Country is required."});
+                        else if(["United States","Canada"].indexOf(address._country)===-1)result.push({propertyName:item,message: "Country should be United States or Canada."});
                         break;
                 }
             });
