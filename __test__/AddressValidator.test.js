@@ -30,9 +30,9 @@ test("ShouldBeValidatorForErrorDateObject", () => {
   const addressVal = new AddressValidator();
 
   address._addressLine =
-    "Lorem ipsum dolor sit amet consecrated animistic elite. Molests voluptuous necessitates poor nam";
+    "Lorem ipsum dolor sit amet consecrated animistic elite. Molests voluptuous necessitates poor nam nam nam";
   address._addressLine2 =
-    "Lorem ipsum dolor sit amet consecrated animistic elite. Molests voluptuous necessitates poor nam";
+    "Lorem ipsum dolor sit amet consecrated animistic elite. Molests voluptuous necessitates poor nam nam nam";
   address._city =
     "Lorem ipsum dolor sit amet consecrated animistic elite. Molests voluptuous necessitates poor nam";
   address._postalCode =
