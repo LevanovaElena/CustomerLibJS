@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no __test__ specified\\\" && exit 1"
+    "test" : "jest",
+    "test-cov": "jest --coverage"
   },
   "author": "Levanova Elena",
   "license": "ISC",
