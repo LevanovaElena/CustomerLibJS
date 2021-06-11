@@ -1,7 +1,7 @@
-const {Person}=require("../src/Person")
+const { Person } = require("../src/Person");
 
-class Customer extends Person{
-    /*
+class Customer extends Person {
+  /*
     *  [StringLength(50, ErrorMessage = "FirstName should maximum 50 lenght.")]
         public override string FirstName { get; set; }
 
@@ -29,20 +29,26 @@ class Customer extends Person{
 
         public decimal? TotalPurchasesAmount { get; set; }*/
 
-
-
-    constructor(firstName,lastName,addressesList,phoneNumber,email,notes,totalPurchasesAmount,lastPurchaseDate) {
-        super(firstName, lastName);
-        this._addressesList=addressesList;
-        this._phoneNumber=phoneNumber;
-        this._email=email;
-        this._notes=notes;
-        this._totalPurchasesAmount=totalPurchasesAmount;
-        this._lastPurchaseDate=lastPurchaseDate;
-    }
-
+  constructor(
+    firstName,
+    lastName,
+    addressesList,
+    phoneNumber,
+    email,
+    notes,
+    totalPurchasesAmount,
+    lastPurchaseDate
+  ) {
+    super(firstName, lastName);
+    this._addressesList = addressesList;
+    this._phoneNumber = phoneNumber;
+    this._email = email;
+    this._notes = notes;
+    this._totalPurchasesAmount = totalPurchasesAmount;
+    this._lastPurchaseDate = lastPurchaseDate;
+  }
 }
 
-module.exports  ={
+module.exports = {
     Customer
 }
