@@ -3,8 +3,7 @@ const { CustomerValidator } = require("../src/CustomerValidator");
 const { Address } = require("../src/Adress");
 
 test("ShouldBeCreateValidator", () => {
-  let customer;
-  customer = new Customer();
+  const customer = new Customer();
   expect(customer).not.toBeNull();
 
   const customerVal = new CustomerValidator();
@@ -46,7 +45,7 @@ test("ShouldBeValidatorForErrorDateObject", () => {
 });
 
 test("ShouldBeValidatorForNotCorrectValidateObject", () => {
-  let objWithOutProp = {};
+  const objWithOutProp = {};
   const customerVal = new CustomerValidator();
   expect(customerVal.ValidatorCustomer(objWithOutProp).length).toBe(0);
   expect(customerVal.ValidatorCustomer(null).length).toBe(0);

@@ -9,6 +9,7 @@
   "author": "Levanova Elena",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.28.0",
     "jest": "^27.0.4",
     "prettier": "^2.3.1"
   },

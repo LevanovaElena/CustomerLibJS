@@ -2,8 +2,7 @@ const { Address } = require("../src/Adress");
 const { Customer } = require("../src/Customer");
 
 test("ShouldBeCreateCustomer", () => {
-  let customer;
-  customer = new Customer("Ivan", "Ivanov");
+  const customer = new Customer("Ivan", "Ivanov");
   customer._addressesList = [new Address()];
   customer._phoneNumber = "+7986456123";
   customer._email = "ivan@gmail.com";

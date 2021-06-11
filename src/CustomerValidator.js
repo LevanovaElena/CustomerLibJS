@@ -4,7 +4,7 @@ class CustomerValidator {
   ValidatorCustomer(customer) {
     let result = [];
     if (!customer) return result;
-    let allProperty = Object.getOwnPropertyNames(customer);
+    const allProperty = Object.getOwnPropertyNames(customer);
     if (allProperty.length > 0) {
       allProperty.forEach((item) => {
         switch (item) {
@@ -13,7 +13,7 @@ class CustomerValidator {
               if (customer._firstName.length > 50)
                 result.push({
                   propertyName: item,
-                  message: "FirstName should maximum 50 lenght.",
+                  message: "FirstName should maximum 50 length.",
                 });
             }
             break;
@@ -26,7 +26,7 @@ class CustomerValidator {
             else if (customer._lastName.length > 50)
               result.push({
                 propertyName: item,
-                message: "LastName should maximum 50 lenght.",
+                message: "LastName should maximum 50 length.",
               });
             break;
           case "_addressesList":

@@ -4,7 +4,7 @@ class AddressValidator {
   ValidatorAddress(address) {
     let result = [];
     if (!address) return result;
-    let allProperty = Object.getOwnPropertyNames(address);
+    const allProperty = Object.getOwnPropertyNames(address);
     if (allProperty.length > 0) {
       allProperty.forEach((item) => {
         switch (item) {
@@ -17,7 +17,7 @@ class AddressValidator {
             else if (address._addressLine.length > 100)
               result.push({
                 propertyName: item,
-                message: "AddressLine should maximum 100 lenght.",
+                message: "AddressLine should maximum 100 length.",
               });
             break;
           case "_addressLine2":
@@ -25,7 +25,7 @@ class AddressValidator {
               if (address._addressLine2.length > 100)
                 result.push({
                   propertyName: item,
-                  message: "AddressLine2 should maximum 100 lenght.",
+                  message: "AddressLine2 should maximum 100 length.",
                 });
             break;
           case "_typeAddress":
@@ -46,7 +46,7 @@ class AddressValidator {
             else if (address._city.length > 50)
               result.push({
                 propertyName: item,
-                message: "City should maximum 50 lenght.",
+                message: "City should maximum 50 length.",
               });
             break;
           case "_postalCode":
@@ -58,7 +58,7 @@ class AddressValidator {
             else if (address._postalCode.length > 6)
               result.push({
                 propertyName: item,
-                message: "PostalCode should maximum 6 lenght.",
+                message: "PostalCode should maximum 6 length.",
               });
             break;
           case "_state":
@@ -70,7 +70,7 @@ class AddressValidator {
             else if (address._state.length > 20)
               result.push({
                 propertyName: item,
-                message: "State should maximum 6 lenght.",
+                message: "State should maximum 6 length.",
               });
             break;
           case "_country":
