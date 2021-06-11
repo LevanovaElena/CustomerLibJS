@@ -43,7 +43,7 @@ test("ShouldBeValidatorForErrorDateObject",()=>{
     expect(adrsVal.ValidatorAddress(address).length).toBe(7);
 });
 
-test("ShouldBeValidatorForNotCorrectObject",()=> {
+test("ShouldBeValidatorForNotCorrectValidateObject",()=> {
     let objWithOutProp={};
     const adrsVal=new AddressValidator();
     expect(adrsVal.ValidatorAddress(objWithOutProp).length).toBe(0);
